@@ -25,10 +25,11 @@ Be maximally concise. Eliminate all output that doesn't add information:
 /** @param {import('@omni-code/addon-api').AddonContext} context */
 function activate(context) {
   context.registerSystemPromptFragment(TERSE_PROMPT_FRAGMENT);
+  console.log('[omni-terse] Activated — terse output prompt fragment registered');
 }
 
 function deactivate() {
-  // No cleanup needed — prompt fragments are cleared automatically on reload.
+  console.log('[omni-terse] Deactivated');
 }
 
 module.exports = { activate, deactivate };
